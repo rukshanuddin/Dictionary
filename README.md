@@ -1,24 +1,21 @@
-# README
+# Dictionary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple dictionary using Ruby on Rails.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+## Objectives
 
-* System dependencies
+- [ ] Ability to enter a dictionary term, via form page
+- [ ] Ability to retrieve the corresponding definition for the term entered
+- [ ] Ability to maintain a list of the last 5 terms searched
+- [ ] Ability to handle exception errors, gracefully
+- [ ] Ability to log such exceptions to assist in troubleshooting
 
-* Configuration
+## Contributing
 
-* Database creation
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Database initialization
+## License
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[MIT](https://choosealicense.com/licenses/mit/)

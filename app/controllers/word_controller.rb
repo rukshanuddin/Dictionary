@@ -24,8 +24,8 @@ class WordController < ApplicationController
         https.use_ssl = true
 
         request = Net::HTTP::Get.new(url)
-        request["app_id"] = ENV[APP_ID]
-        request["app_key"] = ENV[APP_KEY]
+        request["app_id"] = ENV['APP_ID']
+        request["app_key"] = ENV['APP_KEY']
 
         response = https.request(request)
         result = JSON.parse(response.read_body)

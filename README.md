@@ -26,7 +26,7 @@ Then run the Rails server:
 rails s
 ```
 
-## Objectives
+## Objective Checklist
 
 - [x] Ability to enter a dictionary term, via form page
 - [x] Ability to retrieve the corresponding definition for the term entered
@@ -36,8 +36,14 @@ rails s
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Issues and pull requests are welcome at [https://github.com/rukshanuddin/final_frontend](https://github.com/rukshanuddin/final_frontend). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration.
+
+Users are expected to adhere to the [Contributor Covenant code of conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct)
+
+## Authors
+
+**Rukshan Uddin** - *Initial work* - [GitHub/rukshanuddin](https://github.com/rukshanuddin) - [Personal Site](https://awesomeweb.design)
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

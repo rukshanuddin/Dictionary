@@ -6,9 +6,9 @@ This is a simple dictionary using Ruby on Rails.
 
 ## Objectives
 
-- [ ] Ability to enter a dictionary term, via form page
-- [ ] Ability to retrieve the corresponding definition for the term entered
-- [ ] Ability to maintain a list of the last 5 terms searched
+- [x] Ability to enter a dictionary term, via form page
+- [x] Ability to retrieve the corresponding definition for the term entered
+- [x] Ability to maintain a list of the last 5 terms searched
 - [ ] Ability to handle exception errors, gracefully
 - [ ] Ability to log such exceptions to assist in troubleshooting
 

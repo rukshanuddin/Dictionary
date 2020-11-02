@@ -1,7 +1,7 @@
 require "uri"
 require "net/http"
 require "json"
-require "byebug"
+
 EN_US_ENDPOINT_URL = "https://od-api.oxforddictionaries.com/api/v2/entries/en-us/"
 
 class WordController < ApplicationController

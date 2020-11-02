@@ -1,6 +1,6 @@
 # Dictionary
 
-This is a simple dictionary using Ruby on Rails and the 
+This is a simple dictionary using Ruby on Rails and the Oxford Dictionary API. You can access the application hosted [here](https://eerie-mummy-44381.herokuapp.com/).
 
 ## Installation
 

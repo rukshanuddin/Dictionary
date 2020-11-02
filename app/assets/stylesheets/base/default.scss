@@ -29,6 +29,8 @@ ul {
     list-style-type: none;
 }
 
+
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -46,18 +48,8 @@ a:visited {
     text-decoration-color: black;
 }
 
-.control-label {
-    display: none;
-}
-.login-button,
-.sign-up-button {
-    background-color: $navbarColor;
-    color: white !important;
-}
-.container {
-    padding: 0;
-}
-
-.row {
-    margin: 0;
+.card {
+    text-align: center;
+    font-size: 22px;
+    margin: 5px;
 }

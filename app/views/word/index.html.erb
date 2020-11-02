@@ -1,6 +1,8 @@
 <h1>The last 5 searched words:</h1>
-<ol>
-<%@words.each do |word| %>
-<li><%= link_to word.name, word_path+"/#{word.id}" %></li>
-<%end%>
-</ol>
+<div class="card">
+    <ol>
+      <%@words.each do |word| %>
+      <li><%= link_to word.name, word_path+"/#{word.id}" %></li>
+      <%end%>
+    </ol>
+</div>

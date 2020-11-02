@@ -10,7 +10,6 @@ class WordController < ApplicationController
   end
 
   def error
-    
   end
 
   def new
@@ -25,18 +24,17 @@ class WordController < ApplicationController
         https.use_ssl = true
 
         request = Net::HTTP::Get.new(url)
-        request["app_id"] = "3feafaf9"
-        request["app_key"] = "990e3c57ef35957955b9b156464f1522"
+        request["app_id"] = ENV[APP_ID]
+        request["app_key"] = ENV[APP_KEY]
 
         response = https.request(request)
         result = JSON.parse(response.read_body)
         @word = Word.create(name: result["id"]) do |word|
-  word.definition = result["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]["definitions"][0]
-end
+          word.definition = result["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]["definitions"][0]
+        end
         redirect_to action: "show", id: @word.id
       rescue NoMethodError
         redirect_to error_path
-      
       end
     end
   end

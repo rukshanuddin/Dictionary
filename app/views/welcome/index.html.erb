@@ -1,18 +1,19 @@
 <main>
 
- <section class='search-card'>
+ <section class='container p-3 my-3 border'>
     <article style="text-align: center; font-size: 22px; margin: 5px;">
-        <span>Look up definitions quickly from the Oxford API!</span><br/><br/>
-        <section class="input-group mb-3">
-        <%= form_tag("/word", method: "post") do %>
-            <%= label_tag(:q, "") %>
-            <%= text_field_tag(:q) %>
-            <%= submit_tag("Search") %>
-        <% end %>
+        <h1>Look up definitions quickly from the Oxford API!</h1>
+
+        <section class="container p-3 my-3 border">
+            <%= form_tag("/word", method: "post") do %>
+                <%= label_tag(:q, "") %>
+                <%= text_field_tag(:q) %>
+                <%= submit_tag("Search") %>
+            <% end %>
         </section>
     </article>
  </section>
- <br/>
+
 </main>
 
 <footer>Developed by: <a href='https://github.com/rukshanuddin'>Rukshan Uddin</a></footer>

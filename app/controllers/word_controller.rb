@@ -9,13 +9,18 @@ class WordController < ApplicationController
     @words = Word.last(5)
   end
 
+  def error
+    
+  end
+
   def new
     @word = Word.find_by(name: params[:q])
     if @word
+      redirect_to action: "show", id: @word.id
     else
-        query = params[:q]
-        url = URI("https://od-api.oxforddictionaries.com/api/v2/entries/en-us/#{query}")
-
+      query = params[:q]
+      url = URI("https://od-api.oxforddictionaries.com/api/v2/entries/en-us/#{query}")
+      begin
         https = Net::HTTP.new(url.host, url.port)
         https.use_ssl = true
 
@@ -25,12 +30,15 @@ class WordController < ApplicationController
 
         response = https.request(request)
         result = JSON.parse(response.read_body)
-
         @word = Word.create(name: result["id"]) do |word|
-            word.definition = result["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]["definitions"][0]
-        end
+  word.definition = result["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]["definitions"][0]
+end
+        redirect_to action: "show", id: @word.id
+      rescue NoMethodError
+        redirect_to error_path
+      
+      end
     end
-    redirect_to action: "show", id: @word.id
   end
 
   def show

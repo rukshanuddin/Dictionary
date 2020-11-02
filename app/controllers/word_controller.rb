@@ -1,7 +1,6 @@
 require "uri"
 require "net/http"
 require "json"
-require "byebug"
 EN_US_ENDPOINT_URL = "https://od-api.oxforddictionaries.com/api/v2/entries/en-us/"
 
 class WordController < ApplicationController
@@ -43,7 +42,6 @@ class WordController < ApplicationController
         puts "#{response.message}"
         logger.error("#{response.code} #{response.msg}")
         logger.error(response.to_hash)
-        byebug
         redirect_to error_path
       end
     end

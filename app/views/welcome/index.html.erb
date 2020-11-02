@@ -1,1 +1,18 @@
-<h2>My Dictionary</h2>
+<main>
+
+ <section class='search-card'>
+    <article style="text-align: center; font-size: 22px; margin: 5px;">
+        <span>Look up definitions quickly from the Oxford API!</span><br/><br/>
+        <section class="input-group mb-3">
+        <%= form_tag("/word", method: "post") do %>
+            <%= label_tag(:q, "") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+        <% end %>
+        </section>
+    </article>
+ </section>
+ <br/>
+</main>
+
+<footer>Developed by: <a href='https://github.com/rukshanuddin'>Rukshan Uddin</a></footer>

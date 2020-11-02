@@ -1,0 +1,50 @@
+@media screen and (min-width: 767px) {
+
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .solid-color-mode,
+    .border-color-mode {
+        .project-text {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .page-title {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+
+    .new-project-button-parent {
+        text-align: center;
+
+        span {
+            display: none !important;
+        }
+    }
+
+    .project-button {
+        padding: 5px;
+    }
+
+    .category-item {
+        a {
+            padding: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .single-project-list {
+        min-height: 65px;
+        max-height: 65px;
+        padding: 10px 0;
+    }
+}

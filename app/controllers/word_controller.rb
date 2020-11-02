@@ -1,6 +1,7 @@
 require "uri"
 require "net/http"
 require "json"
+require "byebug"
 EN_US_ENDPOINT_URL = "https://od-api.oxforddictionaries.com/api/v2/entries/en-us/"
 
 class WordController < ApplicationController
@@ -17,9 +18,9 @@ class WordController < ApplicationController
     if @word
       redirect_to action: "show", id: @word.id
     else
-      query = params[:q]
-      url = URI("https://od-api.oxforddictionaries.com/api/v2/entries/en-us/#{query}")
+      query = params[:q].gsub(/\s+/, "")
       begin
+        url = URI("https://od-api.oxforddictionaries.com/api/v2/entries/en-us/#{query}")
         https = Net::HTTP.new(url.host, url.port)
         https.use_ssl = true
 
@@ -33,7 +34,16 @@ class WordController < ApplicationController
           word.definition = result["results"][0]["lexicalEntries"][0]["entries"][0]["senses"][0]["definitions"][0]
         end
         redirect_to action: "show", id: @word.id
-      rescue NoMethodError
+
+      rescue Exception => e
+        puts "ERROR: An error occured, #{response.code} HTTP code received."
+        puts "#{e.exception}"
+        puts response.header.read_body
+        puts "#{response.error_type}"
+        puts "#{response.message}"
+        logger.error("#{response.code} #{response.msg}")
+        logger.error(response.to_hash)
+        byebug
         redirect_to error_path
       end
     end

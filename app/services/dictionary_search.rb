@@ -31,7 +31,10 @@ class DictionarySearch
         end
       rescue URI::InvalidURIError => e
         # logger.error("Error: #{e.exception}")
-        puts "#{query} is not a valid search term, remove any spaces and try again"
+        puts "\n\n"
+        puts "ERROR: #{e.exception}\n"
+        puts "The entry #{query} is not a valid search term, remove any spaces and try again"
+        puts "\n\n"
         return false
       rescue Exception => e
         puts "ERROR: An error occured, #{response.code} HTTP code received."

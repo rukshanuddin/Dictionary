@@ -1,9 +1,7 @@
 <h1>Your results:</h1>
 <div class="card">
-   <h2><%= @word.name %></h2>
-   <p>
-     <%= @word.definition %>
-   </p>
-   <br>
-   <p><%= link_to "Last 5 words", words_path %></p>
+  <h2><%= @word.name %></h2>
+  <p><%= @word.definition %></p>
+  <br>
+  <p><%= link_to "Last 5 words", words_path %></p>
 </div>

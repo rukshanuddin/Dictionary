@@ -1,18 +1,17 @@
 <main>
 
- <div class='container p-3 my-3 border'>
-    <div class="card">
-        <h1>Look up definitions quickly from the Oxford API!</h1>
-
-        <div class="container p-3 my-3 border">
-            <%= form_tag("/word", method: "post") do %>
-                <%= label_tag(:q, "") %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Search") %>
-            <% end %>
-        </div>
+<div class='container p-3 my-3 border'>
+  <div class="card">
+    <h1>Look up definitions quickly from the Oxford API!</h1>
+    <div class="container p-3 my-3 border">
+      <%= form_tag("/word", method: "post") do %>
+        <%= label_tag(:q, "") %>
+        <%= select_tag "endpoint", options_for_select([ "Oxford", "Webster" ], "Oxford") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+      <% end %>
     </div>
- </div>
+  </div>
+</div>
 
 </main>
-

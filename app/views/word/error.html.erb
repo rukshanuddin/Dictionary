@@ -1,15 +1,16 @@
- <div class='container p-3 my-3 border'>
-    <div class="card">
-        <h1>Something went wrong, please check your spelling and try again.</h1>
-          <% if flash[:notice] %>
-            <div class="alert alert-warning"><%= flash[:notice] %></div>
-          <% end %>
-        <div class="container p-3 my-3 border">
-            <%= form_tag("/word", method: "post") do %>
-                <%= label_tag(:q, "") %>
-                <%= text_field_tag(:q) %>
-                <%= submit_tag("Search") %>
-            <% end %>
-        </div>
+<div class='container p-3 my-3 border'>
+  <div class="card">
+    <h1>Something went wrong, please check your spelling and try again.</h1>
+      <% if flash[:notice] %>
+        <div class="alert alert-warning"><%= flash[:notice] %></div>
+      <% end %>
+    <div class="container p-3 my-3 border">
+      <%= form_tag("/word", method: "post") do %>
+        <%= select_tag "endpoint", options_for_select([ "Oxford" ], "Oxford") %>
+        <%= label_tag(:q, "") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+      <% end %>
     </div>
+  </div>
  </div>

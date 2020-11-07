@@ -6,8 +6,11 @@
     <div class="container p-3 my-3 border">
       <%= form_tag("/word", method: "post") do %>
         <%= label_tag(:q, "") %>
-        <%= select_tag "endpoint", options_for_select([ "Oxford", "Webster" ], "Oxford") %>
+        <span>Pick your dictionary:</span>
+        <%= select_tag "endpoint", options_for_select(["Oxford", "Webster"], "Oxford") %>
+        <br><br>
         <%= text_field_tag(:q) %>
+        <br><br>
         <%= submit_tag("Search") %>
       <% end %>
     </div>

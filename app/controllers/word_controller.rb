@@ -3,8 +3,7 @@ class WordController < ApplicationController
     @words = Word.last(5)
   end
 
-  def error
-  end
+  def error; end
 
   def new
     @word = Word.find_by(name: params[:q])

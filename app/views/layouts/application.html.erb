@@ -6,7 +6,6 @@
       href="https://www.oed.com/assets/ctx/20200924/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Dictionary App</title>
-
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Biryani:200,400&display=swap">
     <% if !Rails.env.test? %>
@@ -16,13 +15,15 @@
     <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track': "reload" %>
   </head>
+
   <body>
   	<%= render "layouts/navigation" %>
     <%= yield %>
   </body>
+
   <footer class="footer font-small blue pt-4">
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href='https://github.com/rukshanuddin'>Rukshan Uddin</a>
-  </div>
-</footer>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href='https://github.com/rukshanuddin'>Rukshan Uddin</a>
+    </div>
+  </footer>
 </html>

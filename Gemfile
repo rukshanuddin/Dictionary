@@ -25,7 +25,7 @@ gem "rest-client"
 gem 'bootsnap', '>= 1.4.2', require: false
 gem "bootstrap-sass"
 gem "bootstrap_form"
-
+gem "psych"
 gem "jquery-rails"
 gem "dotenv-rails"
 gem "gon"

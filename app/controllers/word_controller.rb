@@ -1,7 +1,4 @@
-
-require "byebug"
 class WordController < ApplicationController
-
 
   def index
     @words = Word.last(5)
@@ -15,7 +12,7 @@ class WordController < ApplicationController
     if @word
       redirect_to action: "show", id: @word.id
     else  
-      if DictionarySearch.new(word_params)
+      if DictionarySearch.new(word_params).call
         @word = DictionarySearch.new(word_params).call
         redirect_to action: "show", id: @word.id
       else
@@ -27,8 +24,6 @@ class WordController < ApplicationController
   def show
     @word = Word.find_by(id: params[:id])
   end
-
-
   
 private
 

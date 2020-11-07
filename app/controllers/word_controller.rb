@@ -1,5 +1,4 @@
 class WordController < ApplicationController
-
   def index
     @words = Word.last(5)
   end
@@ -11,7 +10,7 @@ class WordController < ApplicationController
     @word = Word.find_by(name: params[:q])
     if @word
       redirect_to action: "show", id: @word.id
-    else  
+    else
       if DictionarySearch.new(word_params).call
         @word = DictionarySearch.new(word_params).call
         redirect_to action: "show", id: @word.id
@@ -24,11 +23,10 @@ class WordController < ApplicationController
   def show
     @word = Word.find_by(id: params[:id])
   end
-  
-private
+
+  private
 
   def word_params
     params.permit(:endpoint, :q, :authenticity_token, :commit)
   end
-
 end

@@ -34,6 +34,14 @@ rails s
 - [x] Ability to handle exception errors, gracefully
 - [x] Ability to log such exceptions to assist in troubleshooting
 
+## New Objectives
+
+- [x] Protect the params from the forms
+- [x] Use a service object to handle out API calls
+- [x] Try to DRY up the controller as much as possible, to keep the code readable
+- [x] Allow for easy implementation of additional dictionaries
+- [ ] Log exceptions in a better manner, they have been moved from the WordController. Will need to see how to get the logger working properly. Error handling is unaffected on client side.
+
 ## Contributing
 
 Issues and pull requests are welcome at [https://github.com/rukshanuddin/final_frontend](https://github.com/rukshanuddin/final_frontend). This project as well as all other content on my GitHub are intended to be safe, welcoming, and open for collaboration.

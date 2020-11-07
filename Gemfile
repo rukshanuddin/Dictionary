@@ -5,6 +5,7 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
+# To implement JSON
 gem "json", "~> 1.8", ">= 1.8.3"
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
@@ -25,10 +26,13 @@ gem "rest-client"
 gem 'bootsnap', '>= 1.4.2', require: false
 gem "bootstrap-sass"
 gem "bootstrap_form"
+# Forcing Heroku to use Psych to parse YAML 
 gem "psych"
 gem "jquery-rails"
 gem "dotenv-rails"
+# To get Rails variables in and future Javascript
 gem "gon"
+# To parse CSS and add vendor prefixes to CSS rules 
 gem "autoprefixer-rails"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
